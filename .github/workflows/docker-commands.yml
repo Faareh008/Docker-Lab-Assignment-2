@@ -31,11 +31,11 @@ jobs:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         run: |
           docker build \
-            -t "$DOCKERHUB_USERNAME/bse_XX_commands:latest" .
+            -t "$DOCKERHUB_USERNAME/bse_021_commands:latest" .
 
       - name: Push Docker image
         env:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         run: |
           docker push \
-            "$DOCKERHUB_USERNAME/bse_XX_commands:latest"
+            "$DOCKERHUB_USERNAME/bse_021_commands:latest"
